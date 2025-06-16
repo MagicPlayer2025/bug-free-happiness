@@ -1,0 +1,50 @@
+.article_category_2{
+position: absolute;
+top: 120px;
+left: 7px;
+padding: 5px;
+border-radius: 30px;
+background: #007bd4;
+background: linear-gradient(90deg, rgba(0, 123, 212, 1) 0%, rgba(2, 113, 247, 1) 100%);
+color: white;
+font-weight: 500;
+font-size: 1.5rem;
+}
+.article_osnova h1{
+position: absolute;
+bottom: 120px;
+left: 7px;
+}
+.article_osnova_2 h1{
+text-align: center;
+}
+.article_1{
+background-color: #EFEFEF;
+}
+.article_block{
+background-color: #ffffff;
+border-radius: 68px;
+}
+.article_block h2{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  color: #005B8F;
+  margin-left: 30px;
+}
+.article_block p{
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  margin-left: 30px;
+}
+.article_osnova_2{
+display: flex;
+flex-direction: column;
+align-items: center;
+gap: 50px;    
+}

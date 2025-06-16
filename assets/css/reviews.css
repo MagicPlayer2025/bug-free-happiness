@@ -1,0 +1,69 @@
+.reviews_osnova{
+display: flex;
+flex-direction: column;
+background-color: #005B8F;
+align-items: center;
+margin-top: 10px;
+height: 180px;
+}
+.reviews_osnova h1{
+color:#ffffff; 
+font-family: 'Fira Sans Condensed', sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 48px; 
+text-align:center;
+}
+.reviews_osnova p{
+color:#ffffff; 
+font-family: 'Fira Sans Condensed', sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 30px; 
+text-align:center;
+}
+.reviews_osnova a{
+background-color: #EB8B33;
+width: 268px;
+text-align: center;
+border-radius: 17px;
+color: #ffffff;
+text-decoration: none;
+}
+.feedback_real{
+display:flex;
+flex-direction: column;
+width: 300px;
+height: 450px;
+background-color: #ffffff;
+border-radius: 64px;
+align-items: center;
+justify-content: space-between;     
+}
+.content_reviews{
+background-color: #EFEFEF;
+}
+.feedback_02{
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 123px;
+    justify-items: center;
+}
+.feedback_real_2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.feedback_real_2 h1{
+background-image:url(../assets/img/Ellipse1.svg);
+background-repeat:no-repeat;
+width:69px; 
+height:69px;
+display:flex; 
+justify-content:center; 
+align-items:center;
+}
+.feedback_2{
+margin-top: 50px;
+margin-bottom: 50px;
+}

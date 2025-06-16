@@ -1,0 +1,131 @@
+/* ====================== */
+/* MARK: Global  */
+/* ====================== */
+:root{
+    --color-blue:#005B8F;
+    --color-orange:#EB8B33;
+    --color-white:#EFEFEF;
+    --color-text-light: #A9A7A2;
+     --color-text-gray: #777776;
+    --color-light-blue:rgba(204, 223, 240, 0.507);
+
+    --text-montserrat:"Montserrat", sans-serif;
+}
+
+body{
+    font-family: var(--text-montserrat);
+  
+}
+
+/* MARK:HEADER */
+.header{
+    background-color: var(--color-blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+}
+.header_logo img{
+    width:70px ;
+}
+.header_menu{
+    display: flex;
+    list-style: none;
+    color: var(--color-white);
+    gap: 20px;
+    margin: 0%;
+}
+.header_menu a{
+    text-decoration: none;
+    color: var(--color-white);
+    position: relative;
+}
+.header_menu a:after{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-white);
+    transition: width 0.3s ease;
+}
+.header_menu a:hover::after{
+    width: 100%;
+}
+.icon_links img{
+    width: 27px;
+    margin-inline: 5px;
+    transition-duration: 0.3s;
+}
+.icon_links img:hover{
+    filter: brightness(60%);
+}
+.header_reg_auth {
+    display: flex;
+    gap: 15px;
+}
+.btn_reg, .btn_auth {
+    text-decoration: none;
+    color: var(--color-white);
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: 500;
+}
+.btn_reg {
+    border: 2px solid var(--color-white);
+}
+.btn_auth {
+    background-color: var(--color-orange);
+    border: 2px solid var(--color-orange);
+}
+.btn_reg:hover {
+    background-color: var(--color-white);
+    color: var(--color-blue);
+}
+.btn_auth:hover {
+    background-color: transparent;
+    color: var(--color-orange);
+}
+
+/* MARK: FOOTER */
+.footer{
+    background-color: var(--color-blue);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.footer_links{
+    display: flex;
+    justify-content: center;
+}
+.footer_menu{
+    display: flex;
+    list-style: none;
+    color: var(--color-white);
+    gap: 20px;
+    margin-bottom: 10px;
+
+}
+.footer_menu a{
+    text-decoration: none;
+    color: var(--color-white);
+    transition-duration: 0.3s;
+}
+.footer_menu a:hover{
+    color: var(--color-text-light);
+}
+.line{
+    width: 100%;
+    height: 3px;
+    margin: 0% auto;
+    background-color: var(--color-orange);
+    margin-bottom: 10px;
+}
+.copyright{
+    color: var(--color-white);
+    text-align: center;
+    margin: 0%;
+}

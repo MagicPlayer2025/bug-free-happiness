@@ -1,0 +1,167 @@
+.content_about{
+background-color: #EFEFEF;
+}
+.company{
+display: flex;
+flex-direction: column;
+align-items: center;
+height: 600px;
+background-color: #005B8F;
+border-radius: 40px;
+margin: 20px;
+justify-content: center;
+}
+.company h1{
+font-family:"Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal; 
+font-size:64px; 
+color:white;
+}
+.company_osnova{
+display: flex;
+align-items: center;
+margin-left: 60px;
+margin-right: 60px;
+}
+.company_osnova p{
+font-family:"Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: 200;
+font-style: normal; 
+font-size:40px; 
+color:white;
+}
+.about_mission h1{
+background-color: white;
+width: 860px;
+border-radius: 21px;
+height: 100px;
+align-items: center;
+display: flex;
+justify-content: center;
+color: #005B8F;
+gap: 40px;
+}
+.about_mission_osnova p{
+font-family:"Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: normal; 
+font-size:30px; 
+color:black; 
+margin-right: 30px;
+}
+.osnova{
+margin-right: 20px;
+margin-left: 20px;
+
+}
+/* MARK:ABOUT_mission */
+.about_mission{
+display: flex;
+flex-direction: column;
+gap: 30px;
+}
+.about_mission_osnova{
+display: flex;
+width: 860px;
+gap: 30px;
+background-color: #FFFFFF;
+height: 800px;
+align-items: center;
+border-radius: 41px;
+}
+.about_osnova{
+display: flex;
+justify-content: space-between;
+margin-right: 30px;
+    margin-left: 30px;
+}
+/* MARK:ABOUT_advantages */
+.about_advantages_osnova{
+display: flex;
+width: 860px;
+gap: 30px;
+background-color: #FFFFFF;
+height: 171px;
+align-items: center;
+border-radius: 41px;
+transition: all 0.3s ease;
+}
+.about_advantages_osnova:hover {
+  transform: scale(1.05); 
+}
+.about_advantages{
+display: flex;
+flex-direction: column;
+gap: 37px;
+}
+.about_advantages h1{
+background-color: white;
+width: 860px;
+border-radius: 21px;
+height: 100px;
+align-items: center;
+display: flex;
+justify-content: center;
+color: #005B8F;
+gap: 40px;
+}
+.about_advantages_osnova p{
+font-family:"Inter", sans-serif;
+margin-top: 20px;
+font-weight: 300;
+font-style: normal;
+font-size:30px;
+color:black;
+margin-right: 30px;
+margin-top: 20px;
+}
+.people{
+display: flex;
+margin-left: 20px;
+margin-right: 20px;
+gap: 20px;
+margin-bottom: 20px;
+}
+.people_osnova{
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 482px;
+height: 223px;
+border-radius: 23px;
+background-color: #FFFFFF;
+border: 2px solid #005B8F; 
+transition: all 0.3s ease;
+}
+.people_osnova:hover {
+  transform: scale(1.05); 
+}
+.people_osnova h1{
+font-family:"Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: normal; 
+font-size:40px; 
+color:#005B8F;
+}
+.people_osnova h2{
+font-family:"Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: normal; 
+font-size:32px; 
+color:#005B8F;
+}
+.people_osnova p{
+font-family:"Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-style: normal; 
+font-size:24px; 
+color:#000000;
+text-align: center;
+}

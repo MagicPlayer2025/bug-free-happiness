@@ -1,0 +1,68 @@
+.catalog_content{
+    width: 80%;
+    margin: 0 auto;
+}
+.catalog_cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+}
+.catalog_card{
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+.block_catalog{
+    background-color: #2b6e9e;
+    padding: 50px 0;
+}
+.block_catalog .title, .uslugi_subtitle {
+    color: #EFEFEF;
+    text-align: center;
+}
+.catalog_card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.catalog_card img{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.catalog_card h3{
+    font-size: 1.8rem;
+    color: #2b6e9e;
+    margin-bottom: 15px;
+    text-align: left;
+}
+.catalog_card p{
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+    min-height: 70px;
+    text-align: left;
+}
+.btn_catalog{
+    display: block;
+    background-color: #f0952f;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+.catalog_subtitle{
+    color: white;
+}
+.btn_catalog:hover{
+    background-color: #e0851f;
+}
