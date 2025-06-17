@@ -21,6 +21,12 @@
         }
     }
 
+     function getAllmenu() {
+        return query("
+            SELECT ID, name, url FROM menu
+            
+        ");
+     }
     function query($sql, $params = []){
         $sth = connect();
         $sth = $sth->prepare($sql);
@@ -36,4 +42,12 @@
             SELECT ID, name, description, img, category FROM articles
             
         ");
+     
     }
+     function getAlldiscount() {
+        return query("
+            SELECT ID, name, date, description, img, discount FROM stocks
+            
+        ");
+     }
+     
