@@ -1,3 +1,5 @@
+<?php require_once ($_SERVER['DOCUMENT_ROOT'] . '/function.php') ?>
+<?php $menu = getAllMenu() ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +14,7 @@
     <link rel="stylesheet" href="../assets/css/index.css"> 
     <link rel="stylesheet" href="../assets/css/reviews.css"> 
     <link rel="stylesheet" href="../assets/css/article.css"> 
+    <link rel="stylesheet" href="../assets/css/discount.css">
     <link rel="stylesheet" href="../assets/css/contact.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -27,11 +30,11 @@
             </div>
             <div class="header_links">
                 <ul class="header_menu">
-                    <li><a href="../pages/about.php">О компании</a></li>
-                    <li><a href="../pages/catalog.php">Услуги</a></li>
-                    <li><a href="../pages/articles.php">Статьи</a></li>
-                    <li><a href="../pages/reviews.php">Отзывы</a></li>
-                    <li><a href="../pages/contact.php">Контакты</a></li>
+                     <?php foreach($menu as $elem): ?>
+                    <li><a href="<?php echo $elem['url'] ?>"><?php echo $elem['name'] ?></a></li>
+                    <?php endforeach;?>
+                    
+                    
                    
                 </ul>
             </div>
@@ -41,4 +44,4 @@
                 <a href=""><img src="../assets/img/icon_face.png" alt=""></a>
             </div>
         </header>
-<?php require_once ($_SERVER['DOCUMENT_ROOT'] . '/function.php') ?>
+
