@@ -363,6 +363,9 @@ button[type="submit"]:hover {
 }
 .review_elem_top{
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .review_elem_top img{
     width: 100px;
