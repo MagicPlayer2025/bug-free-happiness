@@ -26,8 +26,8 @@
         <div class="contact-item social-links">
           <i class="fas fa-wifi"></i>
           <span>Наши соцсети</span>
-          <a href="#"><img src="/lll/assets/images/vk-icon.png" alt="VK"></a>
-          <a href="#"><img src="/lll/assets/images/telegram-icon.png" alt="Telegram"></a>
+          <a href="#"><img src="../assets/img/vk-icon.png" alt="VK"></a>
+          <a href="#"><img src="../assets/img/telegram-icon.png" alt="Telegram"></a>
         </div>
       </div>
       <div class="map-placeholder">

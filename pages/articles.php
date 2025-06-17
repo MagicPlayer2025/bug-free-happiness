@@ -1,6 +1,10 @@
 <?php require_once ("../pages/template/header.php") ?>
         
 <div class="content">
+
+    
+        <h1 class="article_title">Почитайте статьи</h1>
+    
             <div class="articles">
 
             <?php 
