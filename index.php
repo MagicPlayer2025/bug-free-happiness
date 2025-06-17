@@ -1,4 +1,12 @@
+<?php
+session_start();
+require 'pages/db.php';
 
+$sql = "SELECT `ID`, `name`, `description`, `img`, `category`, `сaption_1`, `description_1`, `сaption_2`, `description_2`, `сaption_3`, `description_3` FROM `articles` LIMIT 2";
+$sql2 = "SELECT * FROM `reviews` WHERE 1 LIMIT 3";
+$result = $conn->query($sql);
+$result2 = $conn->query($sql2);
+?>
 <?php require_once ("pages/template/header.php") ?>
         <div class="content">
 
@@ -44,32 +52,26 @@
             </div>
          </div>
 
+        
             <div class="block_articles block">
             <h2 class="text-center">Полезные статьи</h2>
             <div class="articles_content">
+                <?php while($row = $result->fetch_assoc()): ?>
                 <div class="article"> 
                     <p class="article_tag">Полезно для новичков*</p>
-                    <img src="assets/img/articles1.png" alt="">
+                    <img src="<?php echo htmlspecialchars($row['img']); ?>" alt="">
                     <div class="title_articles">
-                        <h6>Как выбрать тур и не переплатить</h6>
-                        <p>Узнайте, как сравнивать предложения от разных агентств, на что обратить внимание в отелях и как выбирать надёжные даты вылета.</p>
-                        <a class="read_articles" href="">ЧИТАТЬ СТАТЬЮ</a>
+                        <h6><?php echo htmlspecialchars($row['name']); ?></h6>
+                        <p><?php echo $row['description']  ?></p>
+                        <a class="read_articles" href="pages/article.php?id=<?php echo $row['ID']; ?>">ЧИТАТЬ СТАТЬЮ</a>
                     </div>
+                                    
                 </div>
-                <div class="article">
-                    <p class="article_tag">Полезно для зимнего и летнего планирования*</p>
-                    <img src="assets/img/articles2.png" alt="">
-                    <div class="title_articles">
-                        <h6>Когда выгоднее бронировать туры</h6>
-                        <p>Узнайте, как сезонность влияет на цены, когда начинаются акции, и как поймать самые дешёвые билеты.</p>
-                        <a class="read_articles" href="">ЧИТАТЬ СТАТЬЮ</a>
-                    </div>
-                    
+                <?php endwhile; ?>
                 </div>
                 <div class="btn_articles">
-                    <a class="read_all_articles" href="">Читать все статьи</a>
+                    <a class="read_all_articles" href="pages/articles.php">Читать все статьи</a>
                 </div>
-                
             </div>
            
             </div>
@@ -157,7 +159,7 @@
             Оставьте свои контакты — мы подберем тур из
             более чем 100 проверенных агентств.
         </div>
-        <form action="process_form.php" method="POST">
+        <form action="pages/process_form.php" method="POST">
             <input type="text" name="name" placeholder="Имя" required>
             <input type="tel" name="phone" placeholder="Телефон" required>
             <button type="submit">Отправить</button>
@@ -166,45 +168,30 @@
             <div class="block_reviews">
             <h2>Посмотрите отзывы</h2>
             <div class="reviews_content">
+                <?php while($row2 = $result2->fetch_assoc()): ?>
                 <div class="review_elem">
                     <div class="review_elem_top">
-                        <img src="assets/img/igorP.png" alt="">
-                        <h6>Игорь П.</h6>
-                        <p class="review_elem_rating" style="color: rgb(228, 194, 0);">&starf;&starf;&starf;&starf;&star;</p>
+                                    <h1 style="background-image:url(../assets/img/Ellipse1.svg);background-repeat:no-repeat;width:69px; height:69px;display:flex; justify-content:center; align-items:center;">
+                                    <?php echo htmlspecialchars(mb_substr($row2['name'], 0, 1, 'UTF-8')); ?>
+                        <h6><?php echo htmlspecialchars($row2['name']); ?></h6>
+                        <div style='margin-left:auto;margin-right:auto;text-align:center;margin-top:20px;'>
+                            <?php
+                            for ($i=1; $i<=5; $i++) {
+                             if ($i <= intval($row2['rating'])) {
+                            echo "<img src='assets/img/Star1.svg' style='width:20px;height:auto;margin-right:3px;' />";
+                          } else {
+                        echo "<img src='assets/img/Star6.svg' style='width:20px;height:auto;margin-right:3px;' />";}}?></div>
                     </div>
                     <div class="review_elem_bottom">
                         <p class="review_elem_comment">
-                            Бронировал тур через сайт — всё чётко, документы пришли вовремя. Буду рекомендовать друзьям.
+                            <?php echo nl2br(htmlspecialchars($row2['text'])); ?>
                         </p>
                     </div>
                 </div>
-                 <div class="review_elem">
-                    <div class="review_elem_top">
-                        <img src="assets/img/mariaS.png" alt="">
-                        <h6>Мария С.</h6>
-                        <p class="review_elem_rating" style="color: rgb(228, 194, 0);">&starf;&starf;&starf;&starf;&star;</p>
-                    </div>
-                    <div class="review_elem_bottom">
-                        <p class="review_elem_comment">
-                            Отдых в Турции превзошёл ожидания! Спасибо за удобный подбор тура и быструю поддержку!
-                        </p>
-                    </div>
-                </div>
-                 <div class="review_elem">
-                    <div class="review_elem_top">
-                        <img src="assets/img/annak.png" alt="">
-                        <h6>Анна К.</h6>
-                        <p class="review_elem_rating" style="color: rgb(228, 194, 0);">&starf;&starf;&starf;&starf;&starf;</p>
-                    </div>
-                    <div class="review_elem_bottom">
-                        <p class="review_elem_comment">
-                           Очень удобно, что можно сравнивать предложения от разных агентств. Поехали в Европу — всё прошло отлично
-                        </p>
-                    </div>
-                </div>
+                <?php endwhile; ?>
                 
             </div>
-            <a class="watch_all_reviews" href="">Смотреть все отзывы</a>
+            <a class="watch_all_reviews" href="pages/reviews.php">Смотреть все отзывы</a>
             </div>
 
             <div class="block_contact">
