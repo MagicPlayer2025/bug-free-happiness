@@ -8,7 +8,7 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 }
 
 $id = intval($_GET['id']);
-$sql = "SELECT `ID`, `name`, `description`, `img`, `category`, `сaption_1`, `description_1`, `сaption_2`, `description_2`, `сaption_3`, `description_3` FROM `articles` WHERE ID = $id";
+$sql = "SELECT `ID`, `name`, `description`, `img`, `category` FROM `articles` WHERE ID = $id";
 $result = $conn->query($sql);
 if ($result->num_rows == 0) {
     echo "<p>Услуга не найдена.</p>";
@@ -20,6 +20,8 @@ $service = $result->fetch_assoc();
 
 <?php require_once ("../pages/template/header.php") ?>
 
+<div class="content">
+
 <div class="article_1">
         <div class="article_osnova">
         <img height=900px width=100% src="<?php echo htmlspecialchars($service['img']); ?>" alt="<?php echo htmlspecialchars($service['name']); ?>">
@@ -29,22 +31,15 @@ $service = $result->fetch_assoc();
     <div class="article_osnova_2">
         <h1><?php echo htmlspecialchars($service['name']); ?></h1>
         <div class="article_block">
-        <h2><?php echo htmlspecialchars($service['сaption_1']); ?></h2>
-        <p><?php echo htmlspecialchars($service['description_1']); ?></p>
+        <p><?php echo $service['description']  ?></p>
     </div>
-            <div class="article_block">
-        <h2><?php echo htmlspecialchars($service['сaption_2']); ?></h2>
-        <p><?php echo htmlspecialchars($service['description_2']); ?></p>
-    </div>
-            <div class="article_block">
-        <h2><?php echo htmlspecialchars($service['сaption_3']); ?></h2>
-        <p><?php echo htmlspecialchars($service['description_3']); ?></p>
-    </div>
-        <a href="aplication.php" style="margin-right: 0px;margin-bottom: 50px;"><button type="submit" name="login" class="submit-button">Смотреть туры</button></a>
+           
+        <a href="order.php" style="margin-right: 0px;margin-bottom: 50px;"><button type="submit" name="login" class="btn-form">Смотреть туры</button></a>
     </div>
     </div>
 </div>
 
+</div>
 <?php require_once ("../pages/template/footer.php") ?>
 </body>
 </html>

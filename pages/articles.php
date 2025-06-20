@@ -18,7 +18,7 @@
                     </div>
                     <div class="article_base">
                         <h5><?php echo $article['name']  ?></h5>
-                        <p><?php echo $article['description']  ?></p>
+                        <p><?php echo mb_substr($article['description'], 0, 150) . '...'; ?></p>
                         <a class="article_btn" href="article.php?id=<?php echo $article['ID']; ?>">Читать далее</a>
                     </div>
                     <div class="article_category">

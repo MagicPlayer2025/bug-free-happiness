@@ -1,44 +1,51 @@
 <?php require_once ("../pages/template/header.php") ?>
         <div class="content_about">
 <div class ="company">
-    <h1>О компании</h1>
+   
     <div class = "company_osnova">
+         <h1>О компании</h1>
     <p>Проект «Туризм и Путешествия» был запущен командой разработчиков, объединённых идеей сделать поиск туров максимально удобным и технологичным.
 Мы начинали как небольшой проект в учебной среде, а превратились в полнофункциональную платформу — посредника между туристами и турфирмами.</p>
-    <img src="../assets/img/about_page.png" width=420px height=420px style="border-radius: 210px;">
+   
     </div>
 </div>
 <div class ="about_osnova">
     <div class ="about_mission">
-        <h1>Наша миссия</h1>
+        <h1 class="about_titles">Наша миссия</h1>
         <div class ="about_mission_osnova">
-            <img src="../assets/img/about_mission.png" width = 413px height = 668px style="border-radius: 67px; margin-left: 30px;">
+            <img src="../assets/img/about_mission.png">
             <p>Мы хотим упростить путешествия с помощью технологий.
 Наша платформа соединяет клиентов с проверенными туроператорами, позволяет сравнивать предложения и быстро оформлять заявку в пару кликов — без стресса, без посредников, без потери времени</p>
         </div>
     </div>
         <div class ="about_advantages">
-        <h1>Преимущества</h1>
-        <div class ="about_advantages_osnova">
-            <img src="../assets/img/block.png" width = 93px height = 93px style="margin-left: 30px;">
-            <p>Надёжность и прозрачность</p>
+        <h1 class="about_titles">Преимущества</h1>
+        <div class="about_advantages_content">
+            <div class="about_advantages_osnova">
+                 <i class="fas fa-eye" style="font-size: 24px; color: #005B8F;"></i>
+                <p>Надёжность и прозрачность</p>
+            </div>
+            <div class="about_advantages_osnova">
+                <i class="fas fa-users" style="font-size: 24px; color: #005B8F;"></i>
+                <p>Опытная команда</p>
+            </div>
+            <div class="about_advantages_osnova">
+                <i class="fas fa-headset" style="font-size: 24px; color: #005B8F;"></i>
+                <p>Поддержка 24/7</p>
+            </div>
+            <div class="about_advantages_osnova">
+                <i class="fas fa-plane" style="font-size: 24px; color: #005B8F;"></i>
+                <p>Широкий выбор туров</p>
+            </div>
         </div>
-         <div class ="about_advantages_osnova">
-            <img src="../assets/img/group.png" width = 93px height = 93px style="margin-left: 30px;">
-            <p >Опытная команда</p>
-        </div>
-         <div class ="about_advantages_osnova">
-            <img src="../assets/img/support.png" width = 93px height = 93px style="margin-left: 30px;">
-            <p>Поддержка 24/7</p>
-        </div>
-         <div class ="about_advantages_osnova">
-            <img src="../assets/img/tour.png" width = 93px height = 93px style="margin-left: 30px;">
-            <p>Широкий выбор туров</p>
-        </div>
+        
     </div>
 </div>
-<h1 style="background-color: white;text-align: center; margin-bottom: 20px; font-family: Inter, sans-serif;font-optical-sizing: auto;font-weight: 200;font-style: normal;font-size:40px;color: #005B8F;margin-top: 20px;">Наша команда</h1>
+
 <div class ="people">
+    <h1 class="about_titles">Наша команда</h1>
+    <div class="people_content">
+        
     <div class="people_osnova">
         <h1>Frontend-разработчик</h1>
         <h2>Данияр</h2>
@@ -59,25 +66,7 @@
         <h2>Дмитрий</h2>
         <p>Разработал структуру, внешний вид и удобную навигацию сайта.</p>
     </div>
+    </div>
 </div>
-
-        <footer class="footer">
-            <div class="footer_content">
-                 <div class="footer_links">
-                <ul class="footer_menu">
-                    <li><a href="">О компании</a></li>
-                    <li><a href="">Услуги</a></li>
-                    <li><a href="">Статьи</a></li>
-                    <li><a href="">Отзывы</a></li>
-                    <li><a href="">Контакты</a></li>
-                </ul>
-            </div>
-            <div class="line"></div>
-            <p class="copyright">&copy 2025 Turismo & Путешествия. Все права защищены.</p>
-            </div>
-           
-        </footer>
-    </div>
-    </div>
-</body>
-</html>
+</div>
+<?php require_once ("../pages/template/footer.php") ?>

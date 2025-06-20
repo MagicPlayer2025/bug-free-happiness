@@ -25,9 +25,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("ss", $phone, $message);
 
     if ($stmt->execute()) {
-        header("Location: pages/contact.php?status=success");
+        header("Location: contact.php?status=success");
     } else {
-        header("Location: pages/contact.php?status=error&message=" . urlencode($stmt->error));
+        header("Location: contact.php?status=error&message=" . urlencode($stmt->error));
     }
 
     $stmt->close();

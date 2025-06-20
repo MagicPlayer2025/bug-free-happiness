@@ -35,7 +35,7 @@
       </div>
     </div>
     <div class="contact-form-container">
-      <form class="contact-form" action="../process_contact_form.php" method="POST">
+      <form class="contact-form" action="process_contact_form.php" method="POST">
         <div class="form-group">
           <label for="phone">Телефон</label>
           <input type="text" id="phone" name="phone">
