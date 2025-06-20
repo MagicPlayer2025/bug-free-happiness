@@ -1,0 +1,277 @@
+
+.header_admin{
+    width: 100%;
+    background-color:#005B8F;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-bottom:1px solid white ;
+}
+.header_admin p{
+    margin: 0%;
+    font-size: 1.8rem;
+    font-weight: 700;
+    background-image: linear-gradient( rgba(212, 212, 212, 0.558), #6c6c6c5d);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.sidebar-admin{
+    background-color: #ededed;
+    min-height: 100vh;
+}
+.nav{
+    gap: 5px;
+}
+.nav-item{
+    padding: 2px 0;
+    border-radius: 2px;
+   color: white;
+  
+}
+.nav-link{
+    color: rgb(54, 54, 54);
+    font-weight: 400;
+}
+.nav-link-active:hover{
+    color: white;
+}
+.nav-link-active{
+    background-color: #005B8F;
+    color: white;
+}
+.nav-link-active:hover{
+    color: white;
+}
+.admin-table{
+    width: 90%;
+    margin: 0% auto;
+  
+   border-radius: 5px;
+}
+.table-one{
+    background-color: #005B8F;
+    padding: 10px;
+    color: white;
+}
+.table-one th{
+    padding: 10px;
+}
+.admin-btn{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.admin-table td{
+    height: 90px;
+    border-top: 2px solid rgba(128, 128, 128, 0.812);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.716);
+}
+.admin-table td p{
+  line-height: 1.5; /* Высота строки */
+  max-height: 4.5em; /* 3 строки × 1.5em */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}
+.admin-table td img{
+    width: 100px;
+}
+.admin-table .tr-base:hover{
+    background-color: rgba(128, 128, 128, 0.223);
+}
+
+.insert-btn{
+    text-align: center;
+    text-decoration: none;
+   width: 100%;
+    background-color: rgb(242, 121, 0);
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    border: 0;
+   
+}
+.delete-btn{
+    text-align: center;
+    text-decoration: none;
+  
+    background-color: rgb(224, 224, 224);
+    border: 0;
+    color: white;
+    padding: 3px 5px;
+    border-radius: 1px;
+    font-weight: 500;
+    
+}
+.delete-btn:hover{
+    background-color: rgb(55, 55, 55);
+}
+.table-one:hover{
+    background-color: #005B8F;
+}
+.exit{
+    color: red;
+    cursor: pointer;
+    text-decoration: none;
+}
+.exit:hover{
+    color: gray;
+}
+/* MARK::FORM_ADD */
+
+.compact-form {
+    width: 80%;
+    margin: 0% auto;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.form-row select{
+     padding: 8px 12px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: var(--color-dark-light);
+    
+    font-family: inherit;
+    flex-grow: 1;
+}
+.form-row option{
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-align: center;
+}
+.form-row input,
+.form-row textarea {
+    padding: 8px 12px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: var(--color-dark-light);
+    
+    font-family: inherit;
+    flex-grow: 1;
+}
+
+.form-row input {
+    min-width: 150px;
+}
+.select-form-update{
+       padding: 8px 12px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background: var(--color-dark-light);
+    
+    font-family: inherit;
+   
+}
+.select-form-update option{
+  
+   color: var(--color-dark);
+}
+.form-row textarea {
+    min-width: 200px;
+    resize: none;
+    height: 38px; /* Высота как у input */
+    line-height: 1.4;
+}
+
+.compact-btn {
+    background: rgb(0, 184, 0);
+    color: var(--color-dark);
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    white-space: nowrap;
+    transition: 0.2s;
+    color: #ddd;
+}
+
+.compact-btn:hover {
+    background: #007bff;
+}
+
+
+
+/* MARK:ADMIN_LOGIN */
+.back{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #007bff;
+    cursor: pointer;
+}
+.back:hover{
+    color: #666;
+}
+.admin-header-title{
+    text-align: center;
+    margin: 0;
+}
+.login-container {
+    background: white;
+     padding: 30px;
+     border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+     width: 100%;
+     margin: 0 auto;
+     max-width: 360px;
+    text-align: center;
+    transform: translateY(50%);
+     }
+.login-container h2 {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.8rem;
+    font-weight: 600;
+    }
+.login-container input {
+    display: block;
+     width: 90%;
+     padding: 0.8rem;
+     
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #333;
+    outline: none;
+    margin: 0% auto;
+    margin-bottom: 1rem;
+    }
+.login-container input:focus {
+    border-color: #007bff;
+        }
+.login-container button {
+     width: 100%;
+     padding: 0.8rem;
+    background-color: #007bff;
+    border: none;
+     border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+
+ }
+.login-container button:hover {
+     background-color: #0056b3;
+ }
+.login-container p {
+     margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+    }
+    .login-container a {
+color: #007bff;
+    text-decoration: none;
+        }
+.login-container a:hover {
+    text-decoration: underline;
+        }           

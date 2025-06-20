@@ -21,17 +21,20 @@
      backdrop-filter:brightness(40%) ;
      text-align: center;
     color: #EFEFEF;
+   
 }
 
 .title{
-    
+     animation:  fadeInDown 1.5s;
     font-size: 3rem;
     color:#EFEFEF;
 }
 .banner_title p{
+     animation:  fadeInDown 1.5s;
     font-size: 1.4rem;
 }
 .btn_action{
+      animation:  btn 2.5s;
     border-radius: 30px;
     width: 50px;
   border:2px solid var(--color-white);
@@ -316,7 +319,7 @@ input[type="tel"] {
     font-size: 16px;
 }
 
-button[type="submit"] {
+.btn-form {
     background-color: #ff9933; 
     color: white;
     padding: 12px 20px;
@@ -327,7 +330,7 @@ button[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-button[type="submit"]:hover {
+.btn-form:hover {
     background-color: #e68a2e;
 } 
 
@@ -362,10 +365,10 @@ button[type="submit"]:hover {
     transform: scale(1.01);
 }
 .review_elem_top{
-    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 .review_elem_top img{
     width: 100px;

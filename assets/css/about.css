@@ -1,167 +1,217 @@
-.content_about{
-background-color: #EFEFEF;
+.content_about {
+  background: linear-gradient(135deg, #F5F7FA 0%, #E0EAF5 100%);
+  
+  min-height: 100vh;
 }
-.company{
-display: flex;
-flex-direction: column;
-align-items: center;
-height: 600px;
-background-color: #005B8F;
-border-radius: 40px;
-margin: 20px;
-justify-content: center;
-}
-.company h1{
-font-family:"Inter", sans-serif;
-font-optical-sizing: auto;
-font-weight: 400;
-font-style: normal; 
-font-size:64px; 
-color:white;
-}
-.company_osnova{
-display: flex;
-align-items: center;
-margin-left: 60px;
-margin-right: 60px;
-}
-.company_osnova p{
-font-family:"Inter", sans-serif;
-font-optical-sizing: auto;
-font-weight: 200;
-font-style: normal; 
-font-size:40px; 
-color:white;
-}
-.about_mission h1{
-background-color: white;
-width: 860px;
-border-radius: 21px;
-height: 100px;
-align-items: center;
-display: flex;
-justify-content: center;
-color: #005B8F;
-gap: 40px;
-}
-.about_mission_osnova p{
-font-family:"Inter", sans-serif;
-font-optical-sizing: auto;
-font-weight: 300;
-font-style: normal; 
-font-size:30px; 
-color:black; 
-margin-right: 30px;
-}
-.osnova{
-margin-right: 20px;
-margin-left: 20px;
 
+.company {
+   color: #ffffff;
+  width: 100%;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/img/about-page.jpg) no-repeat center;
+  background-size: cover;
+  
 }
-/* MARK:ABOUT_mission */
-.about_mission{
-display: flex;
-flex-direction: column;
-gap: 30px;
+
+.about_titles{
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 30px 0;
+color:#2980B9;
+  
 }
-.about_mission_osnova{
-display: flex;
-width: 860px;
-gap: 30px;
-background-color: #FFFFFF;
-height: 800px;
-align-items: center;
-border-radius: 41px;
+
+.company_osnova {
+  width: 100%;
+  background: rgba(208, 208, 208, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+  padding: 30px;
+  text-align: center;
+  max-width: 800px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation:  fadeInDown 1.5s;
 }
-.about_osnova{
-display: flex;
-justify-content: space-between;
-margin-right: 30px;
-    margin-left: 30px;
+
+.company_osnova:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-/* MARK:ABOUT_advantages */
+
+.company_osnova p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.4rem;
+  color: #E0EAF5;
+  line-height: 1.8;
+  margin-top: 15px;
+}
+
+.about_mission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+.about_mission_osnova {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+.about_mission_osnova img{
+  width: 30%;
+  border-radius: 10px;
+}
+.about_mission_osnova p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.6rem;
+  color: #34495E;
+  line-height: 1.6;
+  max-width: 50%;
+}
+
+.about_osnova {
+  width: 85%;
+  margin: 0 auto;
+}
+
+.about_advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px 20px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+.about_advantages_content{
+    margin-top: 50px;
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+}
 .about_advantages_osnova{
-display: flex;
-width: 860px;
-gap: 30px;
-background-color: #FFFFFF;
-height: 171px;
-align-items: center;
-border-radius: 41px;
-transition: all 0.3s ease;
+  width: 25%;
+    border: 1px solid rgb(195, 195, 195);
+    padding: 10px;
+   box-shadow: 5px 5px 10px rgb(208, 208, 208);
+    border-radius: 10px;
+   text-align: center;
+   transition: 0.3s;
+}
+
+
+
+.about_advantages_osnova img{
+  width: 100px;
 }
 .about_advantages_osnova:hover {
-  transform: scale(1.05); 
+  transform: translatey(10px);
+box-shadow: 5px -5px 10px rgba(208, 208, 208, 0.873);
 }
-.about_advantages{
-display: flex;
-flex-direction: column;
-gap: 37px;
+
+.about_advantages_osnova p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem;
+  color: #34495E;
+  margin: 0;
 }
-.about_advantages h1{
-background-color: white;
-width: 860px;
-border-radius: 21px;
-height: 100px;
-align-items: center;
-display: flex;
-justify-content: center;
-color: #005B8F;
-gap: 40px;
+
+.people {
+ padding: 40px 20px;
+  background: #FFFFFF;
+  border-radius: 15px;
+  margin: 40px auto;
+  max-width: 1200px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
 }
-.about_advantages_osnova p{
-font-family:"Inter", sans-serif;
-margin-top: 20px;
-font-weight: 300;
-font-style: normal;
-font-size:30px;
-color:black;
-margin-right: 30px;
-margin-top: 20px;
+.people_content{
+ display: flex;
+  justify-content: center;
+  gap: 20px;
+  
 }
-.people{
-display: flex;
-margin-left: 20px;
-margin-right: 20px;
-gap: 20px;
-margin-bottom: 20px;
+.people_osnova {
+ 
+  text-align: center;
+  align-items: center;
+  width: 25%;
+  padding: 20px;
+  background: #F9FBFC;
+  border-radius: 15px;
+  border: 2px solid #3498DB;
+  transition: all 0.3s ease;
 }
-.people_osnova{
-display: flex;
-flex-direction: column;
-align-items: center;
-width: 482px;
-height: 223px;
-border-radius: 23px;
-background-color: #FFFFFF;
-border: 2px solid #005B8F; 
-transition: all 0.3s ease;
-}
+
 .people_osnova:hover {
-  transform: scale(1.05); 
+  transform: translateY(10px);
+  border-color: #2980B9;
+  box-shadow: 5px 5px 10px rgb(208, 208, 208);
 }
-.people_osnova h1{
-font-family:"Inter", sans-serif;
-font-optical-sizing: auto;
-font-weight: 300;
-font-style: normal; 
-font-size:40px; 
-color:#005B8F;
+
+.people_osnova h1 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.8rem;
+  color: #3498DB;
+  margin: 10px 0;
 }
-.people_osnova h2{
-font-family:"Inter", sans-serif;
-font-optical-sizing: auto;
-font-weight: 300;
-font-style: normal; 
-font-size:32px; 
-color:#005B8F;
+
+.people_osnova h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  color: #2980B9;
+  margin: 5px 0;
 }
-.people_osnova p{
-font-family:"Inter", sans-serif;
-font-optical-sizing: auto;
-font-weight: 300;
-font-style: normal; 
-font-size:24px; 
-color:#000000;
-text-align: center;
+
+.people_osnova p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  color: #2C3E50;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Анимации */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .company h1 { font-size: 2rem; }
+  .company_osnova { padding: 20px; }
+  .company_osnova p { font-size: 1.2rem; }
+  .about_mission_osnova { flex-direction: column; text-align: center; }
+  .about_mission_osnova p { max-width: 100%; font-size: 1.4rem; }
+  .about_mission_osnova img { width: 100%; height: auto; margin-bottom: 20px; }
+  .about_advantages_osnova { flex-direction: column; text-align: center; padding: 15px; }
+  .people_osnova { width: 180px; padding: 15px; }
+  .people_osnova h1 { font-size: 1.5rem; }
+  .people_osnova h2 { font-size: 1.2rem; }
+  .people_osnova p { font-size: 1rem; }
+  .footer_links ul { flex-direction: column; gap: 10px; }
 }

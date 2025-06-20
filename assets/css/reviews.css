@@ -1,69 +1,144 @@
-.reviews_osnova{
-display: flex;
-flex-direction: column;
-background-color: #005B8F;
-align-items: center;
-margin-top: 10px;
-height: 180px;
+.content_reviews {
+  background-color: #F5F7FA;
+  padding: 40px 20px;
+  min-height: 100vh;
 }
-.reviews_osnova h1{
-color:#ffffff; 
-font-family: 'Fira Sans Condensed', sans-serif;
-font-weight: 400;
-font-style: normal;
-font-size: 48px; 
-text-align:center;
+
+.reviews_osnova {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-blue);
+  border-radius: 10px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out;
 }
-.reviews_osnova p{
-color:#ffffff; 
-font-family: 'Fira Sans Condensed', sans-serif;
-font-weight: 400;
-font-style: normal;
-font-size: 30px; 
-text-align:center;
+
+.reviews_osnova h1 {
+  color: #FFFFFF;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
 }
-.reviews_osnova a{
-background-color: #EB8B33;
-width: 268px;
-text-align: center;
-border-radius: 17px;
-color: #ffffff;
-text-decoration: none;
+
+.reviews_osnova p {
+  color: #ECF0F1;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin: 0 0 20px 0;
 }
-.feedback_real{
-display:flex;
-flex-direction: column;
-width: 300px;
-height: 450px;
-background-color: #ffffff;
-border-radius: 64px;
-align-items: center;
-justify-content: space-between;     
+
+.reviews_osnova a {
+  background-color: var(--color-orange);
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
-.content_reviews{
-background-color: #EFEFEF;
+
+.reviews_osnova a:hover {
+  background-color: #757575;
 }
-.feedback_02{
-    display: grid;
-    grid-template-columns: repeat(3, 2fr);
-    gap: 123px;
-    justify-items: center;
+
+.feedback_02 {
+    width: 80%;
+    margin: 0% auto;
+    max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  padding: 0 20px;
 }
-.feedback_real_2{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.feedback_2 {
+  margin: 20px 0;
+  width: 400px;
 }
+
+.feedback_real {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+.review_text{
+    font-size: 1.6rem;
+    margin-bottom: auto;
+}
+.feedback_real:hover {
+  transform: translateY(-5px);
+}
+
+.feedback_real_2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .feedback_real_2 h1{
-background-image:url(../assets/img/Ellipse1.svg);
-background-repeat:no-repeat;
-width:69px; 
-height:69px;
-display:flex; 
-justify-content:center; 
-align-items:center;
+  background-image: url('../assets/img/Ellipse1.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 69px;
+  height: 69px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #2C3E50;
+  margin-bottom: 10px;
 }
-.feedback_2{
-margin-top: 50px;
-margin-bottom: 50px;
+
+.feedback_real_2 h1 {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 600;
+  color: #34495E;
+  margin: 10px 0;
+}
+.avatar_review{
+    padding: 40px;
+    border-radius: 60px;
+    background-color: #c2c2c2;
+}
+.review_rating{
+    margin-bottom: 20px;
+    display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.feedback_real_2 img {
+  width: 20px;
+  height: auto;
+  margin: 0 2px;
+}
+
+.feedback_real_2 h2 {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #7F8C8D;
+  text-align: center;
+  line-height: 1.5;
+  margin: 15px 0;
 }

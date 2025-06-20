@@ -1,0 +1,97 @@
+.reviews_leave_content{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.reviews_leave_form {
+background: #005B8F;
+padding: 20px;
+border-radius: 51px;
+width: 1060px;
+height: 800px;
+margin-bottom: 100px;
+margin-top: 100px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+.reviews_leave_form h2, label{
+font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+color: white;
+}
+.reviews_leave_form h2{
+text-align: center;
+}
+        /* Стили для формы */
+        .reviews_leave_form_group {
+            margin-bottom: 15px;
+        }
+        .reviews_leave_label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .reviews_leave_input_text,
+        .reviews_leave_textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .reviews_leave_textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Стили для звезд */
+        .reviews_leave_rating_container {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+        .reviews_leave_rating_container input {
+            display: none;
+        }
+        .reviews_leave_rating_star {
+            font-size: 30px;
+            color: #ddd;
+            cursor: pointer;
+            padding: 0 2px;
+        }
+        .reviews_leave_rating_container input:checked ~ .reviews_leave_rating_star {
+            color: gold;
+        }
+        .reviews_leave_rating_star:hover,
+        .reviews_leave_rating_star:hover ~ .reviews_leave_rating_star {
+            color: gold;
+        }
+        
+        /* Кнопка и сообщения */
+        .reviews_leave_submit_btn {
+            background-color: #EB8B33;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 15px;
+            margin-left: 400px;
+            margin-right: 400px;
+        }
+        .reviews_leave_message {
+            padding: 10px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        .reviews_leave_success {
+            background-color: #dff0d8;
+            color: #3c763d;
+        }
+        .reviews_leave_error {
+            background-color: #f2dede;
+            color: #a94442;
+        }
