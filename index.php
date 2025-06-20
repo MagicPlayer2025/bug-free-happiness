@@ -2,7 +2,7 @@
 session_start();
 require 'pages/db.php';
 
-$sql = "SELECT `ID`, `name`, `description`, `img`, `category`, `сaption_1`, `description_1`, `сaption_2`, `description_2`, `сaption_3`, `description_3` FROM `articles` LIMIT 2";
+$sql = "SELECT `ID`, `name`, `description`, `img`, `category` FROM `articles` LIMIT 2";
 $sql2 = "SELECT * FROM `reviews` WHERE 1 LIMIT 3";
 $result = $conn->query($sql);
 $result2 = $conn->query($sql2);
@@ -16,7 +16,7 @@ $result2 = $conn->query($sql2);
                     <h1 class="title">Куда отправимся на этот раз?</h1>
                     <p>Сравните предложения от более 100 туристических агентств <br>
                     и выберите тур мечты.</p>
-                    <a class="btn_action" href="">Забронировать</a>
+                    <a class="btn_action" href="pages/order.php">Забронировать</a>
                 </div>
                 </div>
             </div>
@@ -62,7 +62,7 @@ $result2 = $conn->query($sql2);
                     <img src="<?php echo htmlspecialchars($row['img']); ?>" alt="">
                     <div class="title_articles">
                         <h6><?php echo htmlspecialchars($row['name']); ?></h6>
-                        <p><?php echo $row['description']  ?></p>
+                        <p><?php echo mb_substr($row['description'], 0, 150) . '...'; ?></p>
                         <a class="read_articles" href="pages/article.php?id=<?php echo $row['ID']; ?>">ЧИТАТЬ СТАТЬЮ</a>
                     </div>
                                     
@@ -162,7 +162,7 @@ $result2 = $conn->query($sql2);
         <form action="pages/process_form.php" method="POST">
             <input type="text" name="name" placeholder="Имя" required>
             <input type="tel" name="phone" placeholder="Телефон" required>
-            <button type="submit">Отправить</button>
+            <button type="submit" class = "btn-form">Отправить</button>
         </form>
     </div></div>
             <div class="block_reviews">
@@ -201,13 +201,7 @@ $result2 = $conn->query($sql2);
                 <div class="contact_info_index">
                     <ul>
                         <li>Адрес: Ижевск, Комунаров 367</li>
-                        <li>Телефон: +7 (495) 123-45-67</li>
-                        <li>Email: info@turput.ru</li>
-                        <li>Наши соцсети:  
-                <a href=""><i  class=" icon-contact fa-brands fa-vk"></i></a>
-                <a href=""><i  class="icon-contact fa-brands fa-instagram"></i></a>
-                <a href=""><i class="icon-contact fa-brands fa-facebook"></i></a>
-           </li>
+                       
                     </ul>
                 </div>
             </div>
